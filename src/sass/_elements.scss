@@ -12,12 +12,29 @@
   
   .slider_component {
     height: 90%;
+    --slider-height-percentage: 42%;
+    --slider-transition-duration: 700ms;
+    --organic-arrow-thickness: 4px;
+    --organic-arrow-border-radius: 0px;
+    --organic-arrow-height: 40px;
+    --organic-arrow-color: transparent;
+    --control-button-width: 5%;
+    --control-button-height: 25%;
+    --control-button-background: transparent;
+    --control-bullet-color: #ffffff;
+    --control-bullet-active-color: #ffffff;
+    --loader-bar-color: #ffffff;
+    --loader-bar-height: 6px;
 
     .slide {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       color: $primaryWhite;
+      height: 100%;
+      width: 100%;
+      background-color: $secondary;
 
       .slide_image {
         width: 70%;
