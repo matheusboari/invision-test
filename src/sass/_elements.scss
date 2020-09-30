@@ -1,0 +1,145 @@
+@import './variables';
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slide_card {
+  height: 100vh;
+  background-color: $secondary;
+  
+  .slider_component {
+    height: 90%;
+
+    .slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $primaryWhite;
+
+      .slide_image {
+        width: 70%;
+      }
+
+      .slide_title {
+        margin: 20px 0;
+      }
+
+      .slide_text {
+        max-width: 500px;
+        line-height: 1.5em;
+        font-size: 1.25em;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.forms_card {
+  display: flex;
+  padding: 20%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .forms_logo {
+    font-weight: 700;
+    align-self: flex-end;
+    color: #000;
+  }
+
+  .bottom_button {
+    cursor: pointer;
+    color: $secondary;
+    text-decoration: underline;
+    background: transparent;
+    border: none;
+  }
+
+  .signin_form {
+    color: $primary;
+    width: 100%;
+
+    .form_title {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .form_component {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 40px;
+
+      .input_label {
+        font-size: 0.8em;
+        margin: 20px 0 5px;
+      }
+      
+      .form_input {
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid $primary;
+      }
+
+      .form_forgot {
+        font-size: 0.8em;
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+
+      .form_button {
+        align-self: center;
+        margin-top: 10px;
+        border: none;
+        background-color: $primary;
+        color: $primaryWhite;
+        font-weight: 700;
+        width: 100px;
+        padding: 10px;
+        border-radius: 30px;
+      }
+
+      .form_divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+
+        .divider_text {
+          background: transparent;
+          margin: 0 20px;
+        }
+      }
+
+      .form_divider:before,
+      .form_divider:after {
+        background: $primary;
+        height: 1px;
+        content: '';
+        flex: 1;
+      }
+
+      .google_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        padding: 5px;
+        width: 50%;
+        border-radius: 30px;
+        border: none;
+        background: $primaryWhite;
+        color: #000;
+        font-weight: 700;
+        box-shadow: 0px 3px 6px #00000029;
+
+        .google_logo {
+          width: 29px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
