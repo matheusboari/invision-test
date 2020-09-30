@@ -3,6 +3,7 @@ import './sass/app.scss';
 
 import Slider from './components/slider';
 import Signin from './components/signin';
+import Signup from './components/signup';
 
 function App() {
   const [signin, setSignin] = useState(true);
@@ -12,7 +13,7 @@ function App() {
       <Slider />
       <div className="forms_card">
         <h1 className="forms_logo">Invision</h1>
-        <Signin />
+        {signin ? <Signin /> : <Signup />}
         <div className="forms_bottom">
           {signin ? (
             <span>

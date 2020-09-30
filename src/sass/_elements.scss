@@ -7,6 +7,7 @@
 
 .slide_card {
   height: 100vh;
+  max-height: 100%;
   background-color: $secondary;
   
   .slider_component {
@@ -38,7 +39,7 @@
 
 .forms_card {
   display: flex;
-  padding: 20%;
+  padding: 0 20%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -63,14 +64,15 @@
 
     .form_title {
       text-align: center;
-      margin: 40px 0;
+      font-weight: normal;
+      margin: 40px 0 10px;
     }
 
     .form_component {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      margin-bottom: 40px;
+      width: 80%;
+      margin: 0 auto 20px;
 
       .input_label {
         font-size: 0.8em;
@@ -87,6 +89,7 @@
         font-size: 0.8em;
         margin-top: 10px;
         align-self: flex-end;
+        cursor: pointer;
       }
 
       .form_button {
@@ -96,7 +99,7 @@
         background-color: $primary;
         color: $primaryWhite;
         font-weight: 700;
-        width: 100px;
+        width: 50%;
         padding: 10px;
         border-radius: 30px;
       }
@@ -105,7 +108,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 30px 0;
+        margin: 10px 0;
 
         .divider_text {
           background: transparent;
@@ -127,7 +130,7 @@
         justify-content: center;
         align-self: center;
         padding: 5px;
-        width: 50%;
+        width: 60%;
         border-radius: 30px;
         border: none;
         background: $primaryWhite;
@@ -140,6 +143,27 @@
           margin-right: 10px;
         }
       }
+
+      .form_condition {
+        margin-top: 20px;
+        text-align: center;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 800px) { 
+  .app { 
+    grid-template-columns: 1fr;
+  }
+
+  .slide_card {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .forms_card {
+    padding: 0;
   }
 }
